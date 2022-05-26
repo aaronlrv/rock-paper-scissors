@@ -6,37 +6,29 @@ function computerPlay () {
     return game [Math.floor(Math.random () * game.length)]
 }
 
-console.log (computerPlay())
+
 
 let computerSelection = computerPlay()
-let playerSelection =  window.prompt("Rock, Paper, Or Scissors?")
-
+let playerInput =  window.prompt("Rock, Paper, Or Scissors?")
+let playerSelection =  playerInput.toLowerCase()
 console.log (playerSelection)
 
-function rps (playerSelection, computerSelection){
+    function rps(playerSelection, computerSelection) {
+        console.log("player: " + playerSelection);
+        console.log("computer: " + computerSelection);
 
-    if (playerSelection === "rock" && computerSelection === "paper") {
-        console.log ("You Lose!");
-    }
-        else {
-        console.log ("You Win!")
+        if (playerSelection === computerSelection){
+            console.log ("It's a Tie!")
         }
 
-    if (playerSelection === "paper" && computerSelection === "scissors") {
-            console.log ("You Lose!");
-    }
-        else {
-        console.log ("You Win!")
-        }
-
-
-    if (playerSelection === "scissors" && computerSelection === "rock") {
-        console.log ("You Lose!");
-    }
-        else {
-        console.log ("You Win!")
+        else if ((playerSelection === "rock" && computerSelection === "scissors") ||
+            (playerSelection === "paper" && computerSelection === "rock") ||
+            (playerSelection === "scissors" && computerSelection === "paper")) {
+            console.log("You win!");
+        } else {
+            console.log("You lose!");
         }
     }
 
-    rps (playerSelection, computerSelection)
 
+rps (playerSelection, computerSelection)
