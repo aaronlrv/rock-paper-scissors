@@ -29,6 +29,19 @@ console.log (playerSelection)
             console.log("You lose!");
         }
     }
+    
+    function rounds (){
+        for (let i = 0; i < 5; i++) {
+            let computerSelection = computerPlay()
+            let playerInput =  window.prompt("Rock, Paper, Or Scissors?")
+            let playerSelection =  playerInput.toLowerCase()
+            
+            rps (playerSelection, computerSelection)
 
 
-rps (playerSelection, computerSelection)
+        }
+
+
+    }
+
+rounds()
