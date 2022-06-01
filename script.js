@@ -46,19 +46,19 @@ let scissors = document.getElementsByClassName("scissors")
 
 let buttons = document.querySelectorAll("button")
 buttons.forEach(button => {
-    button.addEventListener("click", classification(button))
+    button.addEventListener("click", classification)
     })
 
 
-function classification (button) {
-        if(buttons.className === "rock"){
-                playerSelection === "rock"
+function classification (evt) {
+        if(evt.target.className === "rock"){
+                playerSelection = "rock"
                     console.log(playerSelection)
-        } else if (buttons.className === "paper"){
-                playerSelection === "paper"
+        } else if (evt.target.className === "paper"){
+                playerSelection = "paper"
                 console.log(playerSelection)
         } else {
-                playerSelection === "scissors"
+                playerSelection = "scissors"
                 console.log(playerSelection)
                 }
             }
