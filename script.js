@@ -19,6 +19,7 @@ buttons.forEach((button) => {
             return
         } else if (computerScore === 5){
             document.querySelector("#results").innerHTML = "Computer won!"
+            return
         }
 
         
