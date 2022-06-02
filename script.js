@@ -6,7 +6,7 @@ let scissors = document.getElementsByClassName("scissors")
 
 let buttons = document.querySelectorAll("button")
 
-let playedRounds = 0 // the amount of rounds already played
+
 buttons.forEach((button) => {
     button.addEventListener("click", (evt) => {
         console.log(evt)
@@ -14,6 +14,10 @@ buttons.forEach((button) => {
         // if so, `return` will prevent this function from continuing
         // this means that playedRounds won't increment either, although that won't matter
         // so, this basically means the button won't do anything after 5 games
+        let playerSelection = evt.target.className
+
+        rps(playerSelection, computerSelection());
+
         if (playerScore === 5) {
             document.querySelector("#results").innerHTML = "Player won"
             return
@@ -22,15 +26,6 @@ buttons.forEach((button) => {
             return
         }
 
-        
-
-        let playerSelection = evt.target.className
-
-        rps(playerSelection, computerSelection());
-        // ^ another way to do this would be:
-        //     let computerSelection = computerPlay()
-        //     rps(playerSelection, computerSelection)
-        // but there's no reason to make yet another variablecalled computerSelection when we can just put it there directly
     })
 })
 
