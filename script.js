@@ -10,13 +10,12 @@ let playerSelection = buttons.forEach(button => {
     button.addEventListener("click", classification)
     })
 
+function classification (evt) {
+    let playerChoice = evt.target.className;
+    rps(playerChoice, computerPlay())
+      }
 
-    function classification(evt){
-        console.log(evt.target.className)
-        return evt.target.className
-    }
-    
-
+console.log(playerSelection)
 /* Randomizes computer inputs */
 function computerPlay () {
     return game [Math.floor(Math.random () * game.length)]
@@ -24,17 +23,17 @@ function computerPlay () {
 let computerSelection = computerPlay()
 
 /* Win & Lose conditions of RPS as well as prints results */
-    function rps(playerSelection, computerSelection) {
-        let results = document.getElementsByClassName("results")
-        results.innerHTML = `player: ${playerSelection}`
-        results.innerHTML = `computer: ${computerPlay}`
+function rps(playerSelection, computerSelection) {
+    let results = document.getElementsByClassName("results")
+    results.innerHTML = `player: ${playerSelection}`
+    results.innerHTML = `computer: ${computerPlay}`
 
 
-        if (playerSelection === computerSelection){
+    if (playerSelection === computerSelection){
             results.innerHTML = "It's a tie!"
         }
 
-        else if ((playerSelection === "rock" && computerSelection === "scissors") ||
+    else if ((playerSelection === "rock" && computerSelection === "scissors") ||
             (playerSelection === "paper" && computerSelection === "rock") ||
             (playerSelection === "scissors" && computerSelection === "paper")) {
             results.innerHTML = "You win!"
@@ -57,8 +56,7 @@ function rounds (){
 
 
     }
-
-rounds(5)
+rounds()
 
 
 /*
