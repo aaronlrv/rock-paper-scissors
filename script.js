@@ -1,69 +1,64 @@
 let game = ["rock", "paper", "scissors"]
-
-
-
-function computerPlay () {
-    return game [Math.floor(Math.random () * game.length)]
-}
-
-
-
-let computerSelection = computerPlay()
-let playerInput =  window.prompt("Rock, Paper, Or Scissors?")
-let playerSelection =  playerInput.toLowerCase()
-console.log (playerSelection)
-
-    function rps(playerSelection, computerSelection) {
-        console.log("player: " + playerSelection);
-        console.log("computer: " + computerSelection);
-
-        if (playerSelection === computerSelection){
-            console.log ("It's a Tie!")
-        }
-
-        else if ((playerSelection === "rock" && computerSelection === "scissors") ||
-            (playerSelection === "paper" && computerSelection === "rock") ||
-            (playerSelection === "scissors" && computerSelection === "paper")) {
-            console.log("You win!");
-        } else {
-            console.log("You lose!");
-        }
-    }
-    
-
-    function rounds () {
-            let computerSelection = computerPlay()
-            let playerSelection =  playerInput.toLowerCase()
-            
-            rps (playerSelection, computerSelection)
-
-
-        }
-
+/* Defines the button inputs and tracks the clicks */
 let rock = document.getElementsByClassName("rock")
 let paper = document.getElementsByClassName("paper")
 let scissors = document.getElementsByClassName("scissors")
 
 let buttons = document.querySelectorAll("button")
-buttons.forEach(button => {
+
+let playerSelection = buttons.forEach(button => {
     button.addEventListener("click", classification)
     })
 
 
-function classification (evt) {
-        if(evt.target.className === "rock"){
-                playerSelection = "rock"
-                    console.log(playerSelection)
-        } else if (evt.target.className === "paper"){
-                playerSelection = "paper"
-                console.log(playerSelection)
+    function classification(evt){
+        console.log(evt.target.className)
+        return evt.target.className
+    }
+    
+
+/* Randomizes computer inputs */
+function computerPlay () {
+    return game [Math.floor(Math.random () * game.length)]
+}
+let computerSelection = computerPlay()
+
+/* Win & Lose conditions of RPS as well as prints results */
+    function rps(playerSelection, computerSelection) {
+        let results = document.getElementsByClassName("results")
+        results.innerHTML = `player: ${playerSelection}`
+        results.innerHTML = `computer: ${computerPlay}`
+
+
+        if (playerSelection === computerSelection){
+            results.innerHTML = "It's a tie!"
+        }
+
+        else if ((playerSelection === "rock" && computerSelection === "scissors") ||
+            (playerSelection === "paper" && computerSelection === "rock") ||
+            (playerSelection === "scissors" && computerSelection === "paper")) {
+            results.innerHTML = "You win!"
         } else {
-                playerSelection = "scissors"
-                console.log(playerSelection)
-                }
-            }
+            results.innerHTML = "You Lose!"
+        }
+    }
+    
+
+/* Determines the amount of rounds played */            
+function rounds (){
+    for (let i = 0; i < 5; i++) {
+        let computerSelection = computerPlay()
+        let playerInput =  playerSelection
+            
+        rps (playerSelection, computerSelection)
 
 
+        }
+
+
+    }
+
+rounds(5)
 
 
 /*
@@ -137,4 +132,11 @@ buttons.forEach(buttons.onclick = () => {
             }
         })
 
+*/
+
+/*
+let computerSelection = computerPlay()
+let playerInput =  window.prompt("Rock, Paper, Or Scissors?")
+let playerSelection =  playerInput.toLowerCase()
+console.log (playerSelection)
 */
