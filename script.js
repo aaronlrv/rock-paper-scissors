@@ -14,10 +14,14 @@ buttons.forEach((button) => {
         // if so, `return` will prevent this function from continuing
         // this means that playedRounds won't increment either, although that won't matter
         // so, this basically means the button won't do anything after 5 games
-        if (playedRounds >= 5) {
-            document.querySelector("#results").innerHTML = "You already played 5 games, no more for you!"
+        if (playerScore === 5) {
+            document.querySelector("#results").innerHTML = "Player won"
             return
+        } else if (computerScore === 5){
+            document.querySelector("#results").innerHTML = "Computer won!"
         }
+
+        
 
         let playerSelection = evt.target.className
 
@@ -26,9 +30,6 @@ buttons.forEach((button) => {
         //     let computerSelection = computerPlay()
         //     rps(playerSelection, computerSelection)
         // but there's no reason to make yet another variablecalled computerSelection when we can just put it there directly
-
-        playedRounds++ // increment playedRounds since we just played a round
-        score()
     })
 })
 
@@ -39,31 +40,24 @@ function computerSelection() {
 
 let playerScore = 0
 let computerScore = 0
-function score() {
-    if (playerSelection === computerSelection){
-        computerScore = computerScore + 0
-        playerScore = playerScore + 0
-    }
-    else if (resultTitle = "You win!"){
-        playerScore = playerScore + 1
-    } else {
-        computerScore = computerScore + 1
-    }
- console.log (computerScore)
- console.log (playerScore)   
-}
-
 /* Win & Lose conditions of RPS as well as prints results */
 function rps(playerSelection, computerSelection) {
     let resultTitle;
+
     if (playerSelection === computerSelection) {
         resultTitle = "It's a tie!"
+
     } else if ((playerSelection === "rock" && computerSelection === "scissors") ||
         (playerSelection === "paper" && computerSelection === "rock") ||
         (playerSelection === "scissors" && computerSelection === "paper")) {
         resultTitle = "You win!"
+        playerScore = playerScore + 1
+        console.log(playerScore)
+
     } else {
         resultTitle = "You lose!"
+        computerScore = computerScore + 1
+        console.log (computerScore)
     }
 
     let results = document.querySelector("#results")
@@ -75,10 +69,16 @@ function rps(playerSelection, computerSelection) {
             <br>
             computer: ${computerSelection}
         </p>
-    ` // this is a closing quote, not a typo
+    `
+
+    
+    let score = document.querySelector("#score")
+    score.innerHTML = `
+    player: ${playerScore}
+    computer: ${computerScore}
+    
+    `
 }
-
-
 /*
 buttons.addEventListener('click', classification)
 
