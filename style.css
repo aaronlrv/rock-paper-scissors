@@ -1,16 +1,18 @@
 * {
-    border-sizing: border-box;
+    border-style: border-box;
     padding: 0;
     margin: 0;
   }
 
 body {
-    background-color:#F9F1F0;
+    background-color:#EEEDE7;
+    justify-content: space-between;
 
 }
 button {
     width: 125px;
     height: 125px;
+    background-color: #E7D2CC;
 }
 
 .buttons {
@@ -21,7 +23,8 @@ button {
 .heading {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    height:200px;
 }
 
 .img-rock  {
@@ -29,7 +32,30 @@ button {
     height: 125px;
 }
 
-.img-paper {
+.img-paper, .img-scissors {
     width: 90px;
     height: 90px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.button-heading{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.button-heading, .buttons{
+    margin-bottom: 30px;
+}
+
+#score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
