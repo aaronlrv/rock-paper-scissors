@@ -1,0 +1,71 @@
+[33mcommit 167e94708ab7be449d37485683dad7d8b0e6b305[m[33m ([m[1;36mHEAD -> [m[1;32mrps-ui[m[33m, [m[1;32mrps[m[33m)[m
+Author: aaronlrv <aaronvitharanage@gmail.com>
+Date:   Thu Jun 2 18:47:16 2022 +0400
+
+    Fix bug which needed an extra click in order to display results
+
+[33mcommit 8f56fb483c3bfa5dca723c6a8c7ae2065aa4e442[m
+Author: aaronlrv <aaronvitharanage@gmail.com>
+Date:   Thu Jun 2 15:41:13 2022 +0400
+
+    Fix bug issue that made the computer go past 5 points
+
+[33mcommit f7c458cab2f3c78fa9bfe98d0da602088cb7189c[m
+Author: aaronlrv <aaronvitharanage@gmail.com>
+Date:   Thu Jun 2 15:39:26 2022 +0400
+
+    Modified round mechanics to stop at 5 points for any player:
+
+[33mcommit 6dc34be974531aa5e977d03dfb80b167ff95283f[m
+Author: aaronlrv <aaronvitharanage@gmail.com>
+Date:   Thu Jun 2 12:45:40 2022 +0400
+
+    Comments for readability along with play rounds function to keep track of the number of rounds
+
+[33mcommit 67d517432d0a436af101581364d936aa69954bb4[m
+Author: aaronlrv <aaronvitharanage@gmail.com>
+Date:   Thu Jun 2 12:10:56 2022 +0400
+
+    Rewrite of function so it detects and starts a game of rock paper scissors based of a button click
+
+[33mcommit 0d8e57c069a51acb18e7772a5c7892174d4d5c80[m
+Author: aaronlrv <aaronvitharanage@gmail.com>
+Date:   Thu Jun 2 11:46:20 2022 +0400
+
+    Assign button clicks to a variable
+
+[33mcommit 367b564d1902e2cb1a61f95834da52ebe704cbef[m
+Author: aaronlrv <aaronvitharanage@gmail.com>
+Date:   Wed Jun 1 20:48:10 2022 +0400
+
+    FInish detecting button inputs
+
+[33mcommit e3307fc102115727b88252195802eec708efd7bc[m
+Author: aaronlrv <aaronvitharanage@gmail.com>
+Date:   Wed Jun 1 20:07:04 2022 +0400
+
+    Add rough outline of button functionality
+
+[33mcommit 2ae37fb850d32e71576c277fe361696e017876b6[m[33m ([m[1;31morigin/rps-ui[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: aaronlrv <aaronvitharanage@gmail.com>
+Date:   Thu May 26 13:44:55 2022 +0400
+
+    Finish rounds function to play 5 rounds of rps
+
+[33mcommit 384dc389e32d5175b6dcdeb6179974a2faf34c17[m
+Author: aaronlrv <aaronvitharanage@gmail.com>
+Date:   Thu May 26 12:53:55 2022 +0400
+
+    Rewrite rock paper scissors function
+
+[33mcommit 9d6e0c4501afc99a4919457c18b9150eba36af3b[m
+Author: aaronlrv <aaronvitharanage@gmail.com>
+Date:   Wed May 25 21:10:09 2022 +0400
+
+    Finish identifying player input and computer input
+
+[33mcommit 7e3d6e2762fed5bb825b78e08dc04480b2e3a40f[m
+Author: aaronlrv <104592746+aaronlrv@users.noreply.github.com>
+Date:   Wed May 25 17:20:39 2022 +0400
+
+    Initial commit

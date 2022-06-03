@@ -1,3 +1,4 @@
+
 let game = ["rock", "paper", "scissors"]
 /* Defines the button inputs and tracks the clicks */
 let rock = document.getElementsByClassName("rock")
@@ -7,14 +8,24 @@ let scissors = document.getElementsByClassName("scissors")
 let buttons = document.querySelectorAll("button")
 
 
+
+
+
 buttons.forEach((button) => {
     button.addEventListener("click", (evt) => {
         console.log(evt)
+
+        if (playerScore >= 5 || computerScore >= 5){
+            return
+        }
+
         // first, check if we've already played 5 rounds
         // if so, `return` will prevent this function from continuing
         // this means that playedRounds won't increment either, although that won't matter
         // so, this basically means the button won't do anything after 5 games
         let playerSelection = evt.target.className
+
+
 
         rps(playerSelection, computerSelection());
 
@@ -74,7 +85,10 @@ function rps(playerSelection, computerSelection) {
     computer: ${computerScore}
     
     `
+
 }
+
+
 /*
 buttons.addEventListener('click', classification)
 
