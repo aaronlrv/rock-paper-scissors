@@ -5,9 +5,16 @@
     font-family: 'Roboto', sans-serif;
   }
 
+html {
+    height: 100%;
+}
+
 body {
     background-color:#EEEDE7;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    min-height: 100%;
 
 }
 button {
@@ -25,9 +32,8 @@ button {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    height:200px;
     font-family: 'Roboto', sans-serif;
-    background-color:
+    height: 50px;
 }
 
 .img-rock  {
@@ -44,6 +50,11 @@ button {
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
+    align-items: center;
+    margin-top: auto;
+    background-color: #B6B4BB;
+    height: 50px;
+    justify-content: center;
     align-items: center;
 }
 
