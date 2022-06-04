@@ -68,16 +68,16 @@ function rps(playerSelection, computerSelection) {
     results.innerHTML = `
     
     <div class = "results">
-        <h3 class="result-title">${resultTitle}</h3>
-    </div
+        <h4 class="result-title">${resultTitle}</h3>
+    </div>
 
     <div class = "selections">
 
         <div class = "player-selection">
-        <strong> Player </strong>: ${playerSelection} 
+         Player : ${playerSelection} 
         </div>
         <div class = "computer-selection">
-        <strong> Computer </strong>: ${computerSelection}
+         Computer : ${computerSelection}
         </div>
 
     </div>

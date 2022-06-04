@@ -68,7 +68,27 @@ button {
 }
 
 .player-score , .computer-score {
+    display: flex;
     font-size: 30px;
     font-weight: lighter;
+    flex-direction: row;
 }
 
+#results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background-color: #D8D6FF;
+    font-weight: lighter;
+    gap: 30px;
+}
+
+.selections {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
