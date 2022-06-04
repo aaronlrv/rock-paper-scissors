@@ -2,6 +2,7 @@
     border-style: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
   }
 
 body {
@@ -25,6 +26,8 @@ button {
     justify-content: center;
     align-items: flex-start;
     height:200px;
+    font-family: 'Roboto', sans-serif;
+    background-color:
 }
 
 .img-rock  {
@@ -58,4 +61,14 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap:66px;
+    margin-bottom: 50px;
+    background-color: #D8D6FF;
+    height: 50px;
 }
+
+.player-score , .computer-score {
+    font-size: 30px;
+    font-weight: lighter;
+}
+

@@ -66,21 +66,33 @@ function rps(playerSelection, computerSelection) {
 
     let results = document.querySelector("#results")
     results.innerHTML = `
-        <p>${resultTitle}</p>
-        <hr>
-        <p>
-            <strong> Player </strong>: ${playerSelection}
-            <br>
-            <strong> Computer </strong>: ${computerSelection}
-        </p>
+    
+    <div class = "results">
+        <h3 class="result-title">${resultTitle}</h3>
+    </div
+
+    <div class = "selections">
+
+        <div class = "player-selection">
+        <strong> Player </strong>: ${playerSelection} 
+        </div>
+        <div class = "computer-selection">
+        <strong> Computer </strong>: ${computerSelection}
+        </div>
+
+    </div>
     `
 
     
     let score = document.querySelector("#score")
     score.innerHTML = `
-    player: ${playerScore}
-    computer: ${computerScore}
-    
+    <div class = "player-score">
+    Player: ${playerScore}
+    </div>
+
+    <div class = "computer-score">
+    Computer: ${computerScore}
+    </div>
     `
 
 }
