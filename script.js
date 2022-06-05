@@ -68,7 +68,7 @@ function rps(playerSelection, computerSelection) {
     results.innerHTML = `
     
     <div class = "results">
-        <h4 class="result-title">${resultTitle}</h3>
+        <h4 class="results-title">${resultTitle}</h3>
     </div>
 
     <div class = "selections">

@@ -18,8 +18,8 @@ body {
 
 }
 button {
-    width: 125px;
-    height: 125px;
+    width: 200px;
+    height: 200px;
     background-color: #E7D2CC;
 }
 
@@ -34,16 +34,19 @@ button {
     align-items: flex-start;
     font-family: 'Roboto', sans-serif;
     height: 50px;
+    margin-top: 10px;
+    text-decoration: underline;
+    font-size: 20px;
 }
 
 .img-rock  {
-    width: 125px;
-    height: 125px;
+    width: 200px;
+    height: 200px;
 }
 
 .img-paper, .img-scissors {
-    width: 90px;
-    height: 90px;
+    width: 145px;
+    height: 145px;
 }
 
 .footer{
@@ -62,6 +65,7 @@ button {
     display:flex;
     justify-content: center;
     align-content: center;
+    font-size: 25px;
 }
 
 .button-heading, .buttons{
@@ -75,12 +79,12 @@ button {
     gap:66px;
     margin-bottom: 50px;
     background-color: #D8D6FF;
-    height: 50px;
+    height: 100px;
 }
 
 .player-score , .computer-score {
     display: flex;
-    font-size: 30px;
+    font-size: 50px;
     font-weight: lighter;
     flex-direction: row;
 }
@@ -99,7 +103,28 @@ button {
 .selections {
     display: flex;
     flex-direction: row;
-    gap: 30px;
-    font-size: 16px;
+    gap: 50px;
+    font-size: 25px;
     margin-bottom: 30px;
+}
+
+.rock-text , .paper-text , .scissors-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.results-title {
+    font-size: 30px;
+
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: cent;
+    justify-content: center;
 }
